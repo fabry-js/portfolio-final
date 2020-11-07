@@ -15,17 +15,11 @@ app.use((req, res, next) =>{
 
 app.get('/', (req, res, next) =>{
     if (true) {
-        return res.sendFile('./public/index.html', {root: __dirname + '/'})
+        return res.sendFile('.index.html', {root: __dirname + '/'})
     }
     next()
 })
 
-app.get('/whoami', (req, res, next) =>{
-    if(true)
-        return res.sendFile('./public/whoami.html', {root: __dirname + '/'})
-        
-    next()
-})
 
 app.use(express.static('./public/'))
 
